@@ -73,7 +73,7 @@ public class DispatcherServlet extends HttpServlet{
 			Class controllerClass = Class.forName(className);
 			//클래스정보를 이용하여 하위 컨트롤러의 인스턴스 생성하자!!
 			//MovieController controller =(MovieController)controllerClass.newInstance();
-			BloodController controller = (BloodController)controllerClass.newInstance();
+			Controller controller = (Controller)controllerClass.newInstance();
 			controller.execute(request, response);
 			
 			//5단계 : 알맞는 뷰를 보여준다!!

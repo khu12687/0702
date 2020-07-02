@@ -4,7 +4,17 @@
 /movie.do=com.and.controller.movie.MovieController
 /blood.do=com.and.controller.blood.BloodController
 
-#[뷰 매핑]
+#[공지게시판 매핑 Controller] 
+/notice/list.do=com.and.controller.notice.ListController
+/notice/regist.do=com.and.controller.notice.RegistController
+/notice/content.do=com.and.controller.notice.ContentController
+
+#[공기게시판 View 매핑]
+/notice/view/list=/notice/list.jsp
+/notice/view/regist=/notic/list.do
+/notice/view/content=/notice/content.jsp
+
+#[뷰 매핑 
 #처리된 요청을 어떤 뷰로 보여줄지를 매핑
 /view/movie=/movie/result.jsp
 /view/blood=/blood/result.jsp
