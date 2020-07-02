@@ -8,11 +8,16 @@
 /notice/list.do=com.and.controller.notice.ListController
 /notice/regist.do=com.and.controller.notice.RegistController
 /notice/content.do=com.and.controller.notice.ContentController
+/notice/delete.do=com.and.controller.notice.DeleteController
+/notice/edit.do=com.and.controller.notice.EditController
 
 #[공기게시판 View 매핑]
 /notice/view/list=/notice/list.jsp
-/notice/view/regist=/notic/list.do
+/notice/view/regist=/notice/list.do
 /notice/view/content=/notice/content.jsp
+/notice/view/delete=/notice/list.do
+/notice/view/edit=/notice/content.jsp
+
 
 #[뷰 매핑 
 #처리된 요청을 어떤 뷰로 보여줄지를 매핑

@@ -1,5 +1,6 @@
 <%@page import="com.and.model.notice.Notice"%>
 <%@page import="java.sql.DriverManager"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%
 	Notice notice = (Notice)request.getAttribute("notice");
 %>
@@ -35,7 +36,7 @@ $(function(){
 		//케시를 보여주는 거라서, 누군가가 글을 썻을때 갱신된 내용을 볼수 없다
 		
 		//새롭게 서버에게 요청을 시도하는 것임
-		$(location).attr("href","/notice/list.jsp");
+		$(location).attr("href","/notice/list.do");
 	});
 	
 	$("#bt_del").click(function() {
@@ -53,13 +54,13 @@ $(function(){
 
 function del(){
 	//alert("삭제요청 시도!!");
-	location.href="/notice/delete.jsp?notice_id=<%=notice.getNotice_id()%>";
+	location.href="/notice/delete.do?notice_id=<%=notice.getNotice_id()%>";
 }
 
 function edit(){
 	//수정을 담당하는 서블릿에게 요청!!
-	$("form").attr("method","get"); //양이 많아서
-	$("form").attr("action","/notice/edit.jsp"); //양이 많아서
+	$("form").attr("method","post"); //양이 많아서
+	$("form").attr("action","/notice/edit.do"); //양이 많아서
 	$("form").submit();
 }
 </script>
