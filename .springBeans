@@ -8,6 +8,8 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/com/and/spring/context.xml</config>
+		<config>src/com/and/spring/gui.xml</config>
+		<config>src/com/and/spring/aspect.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
