@@ -1,3 +1,4 @@
+<%@page import="com.and.model.member.MemberShip"%>
 <%@page import="java.util.List"%>
 <%@page import="com.and.model.notice.Notice"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
@@ -32,6 +33,19 @@ $(function(){ //문서가 로드될때
 </script>
 </head>
 <body>
+	<h1>
+		<%String nick = (String)application.getAttribute("nick");
+			out.print(nick);
+		%>
+	</h1>
+	<%MemberShip member = (MemberShip)session.getAttribute("member"); %>
+	<h1>
+	<%if(member!=null){
+	member.getName();
+	}else{
+		out.print("세션 사라짐");
+	}	
+	%>님 반갑습니다.</h1>
 	<table width="100%" border="1px">
 		<tr>
 			<td width="5%">No</td>
